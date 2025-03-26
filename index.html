@@ -23,7 +23,7 @@
                 (max-width: 500px) 320px, 
                 (max-width: 1023px) 780px, 
                 (min-width: 1024px) 1024px"
-            alt="Wunderlust logo"
+            alt="Wunderlust logo. an orange sun with two palm trees in front atop of a water wave"
             loading="lazy"
         >
         <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
@@ -41,7 +41,7 @@
 
     </header>
     <main id="main">
-        <section id="majorica">
+        <section id="Majorca">
             <h2>Majorca</h2>
             <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.
             </p>
@@ -56,7 +56,7 @@
                     (max-width: 500px) 320px, 
                     (max-width: 1023px) 780px, 
                     (min-width: 1024px) 1024px" 
-                alt="majorca waves"
+                alt="majorca waves, a rocky coast on the left, cloudy blue sky with turquoise water and waves below"
                 loading="lazy"
             >
 
@@ -70,7 +70,7 @@
                     (max-width: 500px) 320px, 
                     (max-width: 1023px) 780px, 
                     (min-width: 1024px) 1024px" 
-                alt="majorca beach"
+                alt="majorca beach, sandy beach at the bottow with water stretching our in front, rocky costs on all other sides with some greenery atop."
                 loading="lazy"
             >
 
@@ -84,7 +84,7 @@
                     (max-width: 500px) 320px, 
                     (max-width: 1023px) 780px, 
                     (min-width: 1024px) 1024px" 
-                alt="majorca cove"
+                alt="majorca cove, Sun glared blue ocean surrounded on three sides by moss, rocks, and trees, some houses on the left."
                 loading="lazy"
             >
         </section>
@@ -160,7 +160,7 @@
                     (max-width: 500px) 320px, 
                     (max-width: 1023px) 780px, 
                     (min-width: 1024px) 1024px" 
-                alt="Miranda blake profile photo"
+                alt="Miranda blake profile photo, sunglasses and blonde air in a suit"
                 loading="lazy"
                 >
                 <figcaption>Traveling From: London, England</figcaption>
@@ -169,7 +169,7 @@
         </section>
         <section id="testimonial-max-winter">
             <h3>Max Winter</h3>
-            <figure>
+            <figaure>
                 <img 
                 src="images/max-winter-S.png" 
                 srcset="
@@ -180,7 +180,7 @@
                     (max-width: 500px) 320px, 
                     (max-width: 1023px) 780px, 
                     (min-width: 1024px) 1024px" 
-                alt="max-winter profile photo"
+                alt="max-winter profile photo, brown hair, beard trimmed and a brown shirt."
                 loading="lazy"
                 >
                 <figcaption>Traveling From: Berlin, Germany</figcaption>
@@ -220,7 +220,7 @@
                     (max-width: 500px) 320px, 
                     (max-width: 1023px) 780px, 
                     (min-width: 1024px) 1024px" 
-                alt="max-winter profile photo"
+                alt="max-winter profile photo, brown long hair, gold earings wearing a red dress."
                 loading="lazy"
                 >
                 <figcaption>Traveling From: Madrid, Spain</figcaption>
@@ -282,65 +282,66 @@
             </figure>
         </section>
     </aside>
+    <article id="contact-form">
+        <h2>Contact Us</h2>
+        <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+
+            <label for="this-Fname">First Name<span class="required" >*</span></label>
+            <input type="text" name="this-Fname" id="this-Fname" placeholder="Enter First name" autocomplete="given-name" required>
+    
+            <label for="this-Lname">Last Name<span class="required" >*</span></label>
+            <input type="text" name="this-Lname" id="this-Lname" placeholder="Enter last name" autocomplete="family-name" required>
+    
+
+            <fieldset>
+                <legend>Contact Method<span class="required">*</span></legend>
+    
+                <input type="radio" name="Method-pref" id="Method-email">
+                <label for="Method-email">Email</label>
+
+                <input type="radio" name="Method-pref" id="Method-text">
+                <label for="Method-text">Text</label>
+
+                <input type="radio" name="Method-pref" id="Method-phone" required checked>
+                <label for="Method-phone">Phone</label>
+
+            </fieldset>
+
+            <label for="this-email">Email Address<span class="required" >*</span></label>
+            <input type="email" name="this-email" id="this-email" placeholder="Enter Email"  autocomplete="email" required>
+    
+            <label for="this-phone">Phone Number<span class="required" >*</span></label>
+            <input type="tel" name="this-phone" id="this-phone" placeholder="Enter telephone number" required>
+
+            <select name="this-destination" id="this-destination" required>
+                <option value="">Destination*</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Granada">Granada</option>
+                <option value="Ibiza">Ibiza</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Majorca">Majorca</option>
+                <option value="Seville">Seville</option>
+                <option value="Tenerife">Tenerife</option>
+                <option value="Valencia">Valencia</option>
+            </select>
+
+            <select name="this-time" id="this-time" required>
+                <option value="">Travel Time*</option>
+                <option value="Fall">Fall</option>
+                <option value="Winter">Winter</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Flexible">Flexible</option>
+            </select>
+
+            <input type="submit" name="this-submit" id="this-submit" value="submit">
+
+        </form>
+    </article>
 
 
     <footer>
-        <section id="contact-form">
-            <h2>Contact Us</h2>
-            <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
-
-                <label for="this-Fname">First Name<span class="required" >*</span></label>
-                <input type="text" name="this-Fname" id="this-Fname" placeholder="Enter First name" autocomplete="given-name" required>
         
-                <label for="this-Lname">Last Name<span class="required" >*</span></label>
-                <input type="text" name="this-Lname" id="this-Lname" placeholder="Enter last name" autocomplete="family-name" required>
-        
-
-                <fieldset>
-                    <legend>Contact Method<span class="required">*</span></legend>
-        
-                    <input type="radio" name="Method-pref" id="Method-email">
-                    <label for="Method-email">Email</label>
-
-                    <input type="radio" name="Method-pref" id="Method-text">
-                    <label for="Method-text">Text</label>
-
-                    <input type="radio" name="Method-pref" id="Method-phone" required checked>
-                    <label for="Method-phone">Phone</label>
-
-                </fieldset>
-
-                <label for="this-email">Email Address<span class="required" >*</span></label>
-                <input type="email" name="this-email" id="this-email" placeholder="Enter Email"  autocomplete="email" required>
-        
-                <label for="this-phone">Phone Number<span class="required" >*</span></label>
-                <input type="tel" name="this-phone" id="this-phone" placeholder="Enter telephone number" required>
-
-                <select name="this-destination" id="this-destination" required>
-                    <option value="">Destination*</option>
-                    <option value="Barcelona">Barcelona</option>
-                    <option value="Granada">Granada</option>
-                    <option value="Ibiza">Ibiza</option>
-                    <option value="Madrid">Madrid</option>
-                    <option value="Majorca">Majorca</option>
-                    <option value="Seville">Seville</option>
-                    <option value="Tenerife">Tenerife</option>
-                    <option value="Valencia">Valencia</option>
-                </select>
-
-                <select name="this-time" id="this-time" required>
-                    <option value="">Travel Time*</option>
-                    <option value="Fall">Fall</option>
-                    <option value="Winter">Winter</option>
-                    <option value="Spring">Spring</option>
-                    <option value="Summer">Summer</option>
-                    <option value="Flexible">Flexible</option>
-                </select>
-
-		        <input type="submit" name="this-submit" id="this-submit" value="submit">
-
-            </form>
-        </section>
 
         <div id="legal">
             <small>Copyright 2021 Wunderlust&#169;</small>
