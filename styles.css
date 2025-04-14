@@ -73,10 +73,13 @@ h1,h2,h3{
       
 }
 h4,p,q,small,nav,button,form{
-    font-family: var(--fonts-base)
+    font-family: var(--fonts-base);
+    line-height: 1.5em;
       
 }
 
+
+/*heading styles*/
 header {
     background: linear-gradient(to bottom, var(--teal), var(--lt-gray));
 }
@@ -140,6 +143,7 @@ header p{
     padding-left: 3rem;
     font-size: 2em;
 }
+
 
 @media only screen and (max-width: 767px) {
     
@@ -239,7 +243,6 @@ header p{
         grid-area: slogan;
         font-weight: lighter;
         font-size: 1.5em;
-        line-height: 1.5em;
         margin-top:-30px;
         margin-bottom: 20px;
         margin-left: -30px;
@@ -287,4 +290,66 @@ header p{
     header nav ul a {
         height: 30px;
     }
+}
+
+
+/*Intro styles*/
+
+
+header{
+    padding-bottom: 5rem;
+}
+
+#intro{
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "description"
+        "images"
+        ;
+    gap: 20px;
+}
+
+#intro #img-grid{
+    display: grid;
+    grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        ;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 1vw;
+    grid-area: images;
+    gap: 20px;
+}
+
+#intro h2{
+    padding-left: 3rem;
+    font-size: 4em;
+    grid-area: title;
+      
+}
+
+#intro p{
+    padding-left: 3rem;
+    font-size: 1.5em;
+    line-height: 2em;
+    grid-area: description;
+}
+
+#intro #img-grid img:nth-child(1) {
+    grid-area: img1;
+    width: 100vw;
+    height: auto;
+}
+#intro #img-grid img:nth-child(2) {
+    grid-area: img2;
+    width: 100vw;
+    height: auto;
+}
+#intro #img-grid img:nth-child(3) {
+    grid-area: img3;
+    height: 200vh;
+    width: 200vw;
+    overflow: hidden;
 }
