@@ -68,6 +68,12 @@ table {
     --blk: #000000;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
 h1,h2,h3{
     font-family: var(--fonts-heading)
       
@@ -318,7 +324,6 @@ header{
         "img3"
         ;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 1vw;
     grid-area: images;
     gap: 20px;
 }
@@ -332,6 +337,7 @@ header{
 
 #intro p{
     padding-left: 3rem;
+    padding-right: 3rem;
     font-size: 1.5em;
     line-height: 2em;
     grid-area: description;
@@ -339,17 +345,208 @@ header{
 
 #intro #img-grid img:nth-child(1) {
     grid-area: img1;
-    width: 100vw;
-    height: auto;
 }
 #intro #img-grid img:nth-child(2) {
     grid-area: img2;
-    width: 100vw;
-    height: auto;
 }
-#intro #img-grid img:nth-child(3) {
-    grid-area: img3;
-    height: 200vh;
-    width: 200vw;
-    overflow: hidden;
+#intro #img-grid picture {
+    grid-area: img3;      
 }
+
+
+@media only screen and (max-width: 767px) {
+    #intro #img-grid img:nth-child(1) {
+        width: 100vw;
+        height: auto;
+    }
+    #intro #img-grid img:nth-child(2) {
+        width: 100vw;
+        height: auto;
+    }
+    #intro #img-grid picture {
+        transform: scale(2);
+        transform-origin: top;
+        overflow: hidden;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:1199px){
+    #intro h2{
+        padding-left: 5rem;
+          
+    }
+    
+    #intro p{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    #intro #img-grid{
+        grid-template-areas:
+            "img2 img1"
+            "img3 img3"
+            ;
+        grid-area: images;
+        gap: 20px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        grid-template-rows: 1fr 1fr;
+    }
+    #intro #img-grid img:nth-child(1) {
+        width: 42vw;
+    }
+    #intro #img-grid img:nth-child(2) {
+        width: 42vw;
+    }
+    #intro #img-grid picture img{
+        width: 86vw !important;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #intro h2{
+        padding-left: 5rem;
+        height: auto;
+    }
+    #intro p{
+        padding-left: 5rem;
+        padding-right: 1rem;
+        border: 5px solid black;
+    }
+    #intro{
+        display: grid;
+        grid-template-areas: 
+            "title images"
+            "description images"
+            ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3rem 1fr;
+        border: 5px solid black;
+
+    }
+    #intro #img-grid{
+        grid-template-areas:
+            "img2 img1"
+            "img3 img3"
+            ;
+        grid-area: images;
+        gap: 20px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        width: 40vw;
+        grid-template-rows: 1fr 1fr;
+        border: 5px solid black;
+    }
+    #intro #img-grid img:nth-child(1) {
+        width: 20vw;
+    }
+    #intro #img-grid img:nth-child(2) {
+        width: 20vw;
+    }
+    #intro #img-grid picture img{
+        width: 42vw !important;
+        height: auto;
+    }
+
+}
+
+/*plan section styles*/
+
+#intro{
+    padding-bottom: 30px;
+}
+
+#plan{
+    background-color: var(--ylw);
+    padding-bottom: 30px;
+}
+
+#plan h3{
+    padding-top: 3rem;
+    padding-left: 3.5rem;
+    padding-bottom: 2rem;
+    font-size: 3em;
+}
+
+#main-content article #plan div{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 15px;
+}
+
+
+    /*block display svgs*/
+#main-content article #plan div section{
+    display: block;
+    background-color: var(--teal);
+    width: 400px;
+    height: 340px;
+    border: 3px solid var(--wte);
+    border-radius: 10px;
+}
+
+#main-content article #plan div section h4{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2em;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    justify-self: center;
+}
+
+#main-content article #plan div section img{
+    display: flex;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+
+@media only screen and (min-width: 768px){
+    #main-content article #plan div section{
+        border: 6px solid var(--wte);
+    }
+    #main-content article #plan div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1100px;
+    }
+    #main-content article #plan div section{
+        width: 350px;
+    }
+    #main-content article #plan div section h4{
+        font-size: 1.5em;
+    }
+}
+
+
+@media only screen and (min-width: 1200px){
+    #main-content article #plan div{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 90vw;
+        max-width: 10000px;
+    }
+    #main-content article #plan div section img{
+        height: 140px;
+    }
+    #main-content article #plan div section h4{
+        font-size: 1.3em;
+    }
+    #main-content article #plan div section{
+        display: block;
+        background-color: var(--teal);
+        width: 250px;
+        height: 230px;
+    }
+}
+
+
+
+
+
+
