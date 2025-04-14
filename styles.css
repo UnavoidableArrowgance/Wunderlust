@@ -122,6 +122,25 @@ header input{
     overflow:hidden;
 }
 
+header #menu-toggle{
+    text-transform: uppercase;
+}
+
+header nav ul a:hover{
+    background-color:var(--lt-gray);
+}
+
+header h1{
+    padding-left: 3rem;
+    font-size: 4em;
+      
+}
+
+header p{
+    padding-left: 3rem;
+    font-size: 2em;
+}
+
 @media only screen and (max-width: 767px) {
     
     header #menu-toggle ul{
@@ -149,6 +168,11 @@ header input{
         font-weight: bold;
         margin: 0%;
         padding: 0%;
+    }
+
+    header label:hover{
+        background-color: var(--blk);
+        color:var(--wte);
     }
 
     #toggle:checked+label {
@@ -184,24 +208,12 @@ header input{
         height: 150px;
         font-size: 2em;
     }
-
     #toggle:checked ~ ul a:hover{
-        background-color: var(--prpl);
+        background-color:var(--blu);
     }
 }
-header h1{
-    padding-left: 3rem;
-    font-size: 4em;
-    font-family: var(--fonts-heading)
-      
-}
 
-header p{
-    padding-left: 3rem;
-    font-size: 2em;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1199px){
+@media only screen and (min-width: 768px){
     header{
         display:grid;
         grid-template-columns: min-content 1fr;
@@ -261,75 +273,18 @@ header p{
     li:first-child a{
         background-color:var(--ylw);
     }
-    header nav ul a:hover{
-        background-color:var(--prpl);
-    }
 }
 
 
 @media only screen and (min-width: 1200px){
-    header{
-        display:grid;
-        grid-template-columns: min-content 1fr;
-        grid-template-areas:
-        "logo title"
-        "logo slogan"
-        ;
-    }
-    header img{
-        grid-area: logo;
-        margin-top: 40px;
-        justify-self: end;
-        height: 75%;
-    }
-    header h1{
-        grid-area: title;
-        margin-top: 40px;
-        font-size: 3.5em;
-        margin-left: -30px;
-    }
-    header p{
-        grid-area: slogan;
-        font-weight: lighter;
-        font-size: 1.5em;
-        line-height: 1.5em;
-        margin-top:-30px;
-        margin-bottom: 20px;
-        margin-left: -30px;
-        padding-right: 10px;
-    }
-    header nav{
-        grid-area: menu;
-    }
-    header nav :where(label, input){
-        display: none;
-    }
-    header nav ul{
-        display: flex;
+    header nav ul {
         position: absolute;
         top:0;
         right: 0;
         gap: 0.5rem;
-        padding-left: 60px;
-        align-items: center;
-        justify-content: left;
     }
-    header nav ul a{
-        display: flex;
-        background-color:var(--wte);
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        justify-content: center;
-        align-items: center;
-        width:10rem;
+
+    header nav ul a {
         height: 30px;
-        font-size: 1em;
-    }
-    li:first-child a{
-        background-color:var(--ylw);
-    }
-    header nav ul a:hover{
-        background-color:var(--prpl);
     }
 }
