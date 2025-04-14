@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* my styles below*/
+
+:root{
+    font-size: 16px;
+    --fonts: Montserrat, sans-serif;
+    --light-gray: #e7f4ff;
+    --med-gray: #555;
+    --white: #fff;
+}
+
+header {
+    background: linear-gradient(to bottom, #53d3f7, var(--light-gray));
+}
+main {
+    background-color: var(--light-gray);
+}
+
+header img{
+    max-width: 40vw;
+    min-width: 220px;
+}
+
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+   
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.sr-only{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+header input{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+@media only screen and (max-width: 599px) {
+    
+    header #menu-toggle ul{
+        display:none;
+        /*
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+        */
+    }
+    header label{
+        display: flex;
+        position: absolute;
+        background-color:gold;
+        width:45%;
+        height:70px;
+        top:1rem;
+        right:0;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #toggle:checked+label {
+        background-color:black;
+        color:white;
+        width:100%;
+    
+    } 
+
+    #toggle:checked ~ ul {
+        position: fixed;
+        top: calc(70px + 1em);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    #toggle:checked ~ ul li{
+        width:100%;
+    }
+
+    #toggle:checked ~ ul a{
+        display: flex;
+        background-color:rgb(33, 176, 212);
+        border-bottom:2px solid black;
+        text-decoration: none;
+        color:black;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height: 150px;
+        font-size: 2em;
+    }
+
+    #toggle:checked ~ ul a:hover{
+        background-color: pink;
+    }
+}
+header h1{
+    padding-left: 3rem;
+    font-size: 4em;
+}
+
+header p{
+    padding-left: 3rem;
+    font-size: 2em;
+}
+
+@media only screen and (min-width: 600px){
+    header{
+        display:grid;
+        grid-template:
+        "logo title"
+        "logo slogan"
+        "menu menu"
+        ;
+        border: 5px solid black;
+    }
+    header img{
+        grid-area: logo;
+        margin-top: 20px;
+    }
+    header h1{
+        grid-area: title;
+        margin-top: 20px;
+    }
+    header p{
+        grid-area: slogan;
+        font-weight: lighter;
+    }
+    header nav{
+        grid-area: menu;
+    }
+    header nav :where(label, input){
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        padding-left: 50px;
+        align-items: center;
+    }
+    header nav ul a{
+        display: flex;
+        background-color:var(--white);
+        text-decoration: none;
+        color: black;
+        width:150px;
+        height: 100px;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        width:7em;
+        height: 50px;
+        font-size: 1.5em;
+    }
+}
+
+
+
