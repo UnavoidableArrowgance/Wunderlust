@@ -529,7 +529,8 @@ header{
         flex-wrap: nowrap;
         justify-content: space-around;
         width: 90vw;
-        max-width: 10000px;
+        max-width: none;
+        padding-bottom: 50px;
     }
     #main-content article #plan div section img{
         height: 140px;
@@ -542,6 +543,144 @@ header{
         background-color: var(--teal);
         width: 250px;
         height: 230px;
+        border: 2px solid var(--wte);
+    }
+}
+
+
+
+/*testimonials section styles*/
+
+
+
+#testimonials {
+    padding-bottom: 30px;
+    background-color: var(--wte);
+}
+
+#testimonials h3 {
+    padding-top: 3rem;
+    padding-left: 3.5rem;
+    padding-bottom: 2rem;
+    font-size: 3em;
+}
+
+
+#main-content article #testimonials div {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+#main-content article #testimonials div section {
+    display: block;
+    text-align: center;
+}
+
+#main-content article #testimonials div section img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+    width: 45vw;
+}
+
+#main-content article #testimonials div section h4{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2em;
+    width: 60vw;
+    text-align: center;
+    margin: auto;
+}
+
+#main-content article #testimonials div section p {
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+}
+
+
+q::before {
+    content: "“";
+}
+  q::after {
+    content: "”";
+}
+
+
+#main-content article #testimonials div section q {
+    display: block;
+    font-style: italic;
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+    width: 68vw;
+}
+
+
+@media only screen and (min-width: 768px) {
+    #main-content article #testimonials div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1000px;
+    }
+
+    #main-content article #testimonials div section {
+        width: 350px;
+    }
+
+    #main-content article #testimonials div section img {
+        width: auto;
+    }
+
+    #main-content article #testimonials div section h4 {
+        width: 300px;
+    }
+
+    #main-content article #testimonials div section q {
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #testimonials h3 {
+        font-size: 2em;
+    }
+
+    #main-content article #testimonials div {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 95vw;
+        max-width: none;
+    }
+
+    #main-content article #testimonials div section{
+        width: 20vw;
+    }
+
+    #main-content article #testimonials div section img {
+        height: 140px;
+    }
+
+    #main-content article #testimonials div section h4 {
+        font-size: 1.5em;
+        margin-top: 10px;
+        width: auto;
+    }
+
+    #main-content article #testimonials div section p {
+        font-size: 1.2em;
+        margin-top: -5px;
+        margin-bottom: -5px;
+    }
+
+    #main-content article #testimonials div section q {
+        font-size: 1.2em;
+        padding-left: 3rem;
     }
 }
 
