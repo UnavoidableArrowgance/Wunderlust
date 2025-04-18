@@ -758,7 +758,7 @@ q::before {
         position: absolute;
         left: 0;
         right: 0;
-        color: black; /* or inherit */
+        color: var(--blk);
         text-align: center;
         visibility: visible;
     }
@@ -827,8 +827,10 @@ q::before {
     font-weight: bold;
 }
 #contact form input, #contact form select{
-    border-color: var(--prpl);
-    border-width: 3px;
+    border: 4px solid var(--prpl);
+}
+#contact form input:focus, #contact form select:focus{
+    border: 6px solid var(--prpl);
 }
 
 form{
@@ -836,20 +838,17 @@ form{
 	width: 80vw;
 	padding: 1em;
 	margin: 0 auto;
-	color: #222;
 	font-size: 1.1em;
 }
 
 
 /* Radio button styling */
-#contact #nums fieldset{
-    display: flex;
-}
 
 .radio-input {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    padding-right: 5px;
 }
 
 input[type="radio"] {
@@ -883,9 +882,51 @@ input[type="radio"]:checked + .radio-control::after {
     transform: translate(-50%, -50%);
 }
 
-input, label, fieldset{
+
+/*drop down styles*/
+
+select {
+    appearance: none;
+}
+
+.custom-select::after {
+    content: "";
+    width: 2em;
+    height: 2em;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    background-color: var(--prpl);
+    clip-path: polygon(100% 45%, 100% 60%, 50% 100%, 0 60%, 0 45%, 50% 85%);
+ }
+  .custom-select {
+    display: grid;
+  }
+  .custom-select {
+    grid-template-areas: "select";
+  }
+  
+  select,
+  .custom-select:after {
+    grid-area: select;
+  }
+  .custom-select {
+    align-items: center;
+  }
+  
+  .custom-select:after {
+    justify-self: end;
+  }
+
+
+
+
+
+
+
+input, label, fieldset, select{
 	display: block;
 	width: 95%;
+    font-family: var(--fonts-base);
 }
 
 
@@ -894,20 +935,24 @@ label{
     margin-bottom: 0.25em;
 }
 
-input{
-	font-size: 1em;
-	padding: 0.25em 0.5em;
-	border: 1px solid #222;
-	height: 1.5em;
+input, select{
+	font-size: 1.1em;
+    padding: .5rem;
+}
+
+select{
+    width: 100%;
 }
 
 input[type=submit]{
     color: var(--wte);
     background-color: var(--prpl);
 	padding: 0.75em;
-	width: 35%;
+    margin-top: 10px;
+	width: 100%;
 	height: auto;
 }
+
 
 
 @media only screen and (min-width: 768px){
@@ -919,15 +964,44 @@ input[type=submit]{
         border: none;
         font-family: serif;
     }
+    select{
+        width: 99%;
+
+    }
+    #contact #nums fieldset{
+        display: flex;
+    }
 
 
 }
 
 @media only screen and (min-width: 1200px) {
     form{
-        width:95vw;
+        width:90vw;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #contact h3{
+        font-size:2rem;
+        padding-top: 50px;
+        padding-left: 4.1%;
+    }
+    select{
+        width: 100%;
+    }
+    input{
+        width: 90%;
+    }
+    #nums fieldset{
+        margin-top: 15px;
+    }
+    #nums fieldset label{
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    input[type=submit]{
+        margin-top: 35px;
+        width: 45%;
+        margin-left:55%;
     }
 }
 
