@@ -704,7 +704,7 @@ q::before {
     font-size: 3em;
 }
 #main-content article #about div {
-    
+    margin: auto;
     display: flex;
     justify-self: center;
     flex-direction: row;
@@ -887,6 +887,7 @@ input[type="radio"]:checked + .radio-control::after {
 
 select {
     appearance: none;
+    background-color: var(--wte);
 }
 
 .custom-select::after {
@@ -1063,8 +1064,3 @@ footer a{
 }
 
 
-
-
-
-
-/*👉border: 5px solid black;👈*/
